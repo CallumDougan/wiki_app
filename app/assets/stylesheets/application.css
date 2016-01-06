@@ -1,3 +1,108 @@
+body {
+  text-align: center;
+  background-color: #79b9d8;
+  color: #174358;
+}
+
+nav li {
+  display: inline;
+}
+
+section {
+  display: block;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #174358;
+  border-style: double;
+  margin: 3px;
+  padding: 5px;
+}
+
+button {
+  font-family: times;
+  font-size: 16px;
+  border-color: #174358;
+  text-decoration: none;
+  background-color: #79b9d8;
+  color: #174358;
+  margin: 15px;
+  border-style: solid;
+}
+
+a {
+  float: bottom;
+  padding: 2px 5px;
+  border-width: 2px;
+  text-decoration: none;
+  background-color: #79b9d8;
+  color: #174358;
+  margin: 15px;
+  border-style: solid;
+}
+
+a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+button:hover{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+div {
+  clear: both;
+  margin: 20px;
+  display: inline-block;
+}
+
+textarea {
+  min-width: 300px;
+  min-height: 100px;
+}
+
+label{
+    display: inline-block;
+    float: center;
+    clear: left;
+    width: 100px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

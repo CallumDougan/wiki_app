@@ -12,7 +12,7 @@
 
   <div class='login'>
     <% if current_user %>
-    <%= current_user.name %>
+    <b>Hello, <%= current_user.name %></b>
       <%= link_to('log out', destroy_user_session_path, method: :delete) %>
     <% else %>
       <%= link_to('sign in', new_user_session_path) %>

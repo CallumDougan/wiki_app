@@ -7,7 +7,7 @@
 <b><%= User.find(comment.user_id).name %> posted:</b>
 <br><br>
 "<%= comment.content %>"
-<br>at:
+<br>
 <b><%= comment.time_finder(comment.created_at) %> seconds ago</b>
 <br><br>
 <% end %>
