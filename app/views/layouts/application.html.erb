@@ -10,6 +10,16 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+  <div class='login'>
+    <% if current_user %>
+    <%= current_user.name %>
+      <%= link_to('log out', destroy_user_session_path, method: :delete) %>
+    <% else %>
+      <%= link_to('sign in', new_user_session_path) %>
+      <%= link_to('register', new_user_registration_path) %>
+    <% end %>
+  </div>
+
   <nav>
     <ul>
       <li><%= link_to('Home', root_path) %></li>
