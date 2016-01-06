@@ -5,7 +5,8 @@
 <% if @comments != nil %>
 <% @comments.each do |comment| %>
 <% if comment.user_id != nil %>
-<b><%= comment.created_at %></b>
+<b><%=  %>
+<%= comment.created_at %></b>
 <br>
 <%= comment.content %>
 <br><br>

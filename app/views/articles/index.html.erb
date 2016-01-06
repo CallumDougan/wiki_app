@@ -4,5 +4,6 @@
 <% end %>
 
 <br>
-
+<% if can? :update, @article %>
 <%= link_to('New Article', new_article_path) %>
+<% end %>
