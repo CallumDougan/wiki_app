@@ -1,9 +1,10 @@
+<br><br>
 <% @articles.each do |article| %>
   <%= link_to article.name, article_path(article) %>
-  <br>
+  <br><br>
 <% end %>
 
-<br>
+<br><br>
 
 <% if can? :update, Article %>
 <%= link_to('New Article', new_article_path) %>
