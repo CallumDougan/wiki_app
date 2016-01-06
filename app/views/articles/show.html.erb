@@ -15,7 +15,7 @@
 <br>
 <%= form_for @comment do |f| %>
 <br>
-<b><%= f.label 'Leave comment' %></b>
+<b><%= f.label'Leave comment' %></b>
 <br>
 <%= f.text_area :content%>
 <%= f.hidden_field :set_id, value: @article.id %>
