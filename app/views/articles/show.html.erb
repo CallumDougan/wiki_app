@@ -3,25 +3,23 @@
 <br><br>
 <h3>Comments</h3>
 <% if @comments != nil %>
-  <% @comments.each do |comment| %>
-  <b><%= comment.created_at %></b>
-  <br>
-  <%= comment.content %>
-  <br><br>
-  <% end %>
+<% @comments.each do |comment| %>
+<b><%= comment.created_at %></b>
+<br>
+<%= comment.content %>
+<br><br>
+<% end %>
 <% end %>
 <br>
 <%= form_for @comment do |f| %>
-<<<<<<< HEAD
-  <br>
-  <b><%= f.label 'Leave comment' %></b>
-  <br>
-  <%= f.text_area :content%>
-  <%= hidden_field(:art_id, @article.id) %>
-  <br>
-  <%= f.submit 'Submit comment' %>
-  <br>
-=======
+<br>
+<b><%= f.label 'Leave comment' %></b>
+<br>
+<%= f.text_area :content%>
+<%= hidden_field(:art_id, @article.id) %>
+<br>
+<%= f.submit 'Submit comment' %>
+<br>
 <br>
 <b><%= f.label 'Leave comment' %></b>
 <br>
@@ -30,5 +28,4 @@
 <br>
 <%= f.submit 'Submit comment' %>
 <br>
->>>>>>> 9e8ca18cf7c77107991e0df08afbc3a5e8780c9a
 <% end %>
