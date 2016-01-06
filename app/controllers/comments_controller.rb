@@ -23,9 +23,6 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to article_path(params['comment']['article_id']), notice: 'well posted!' }
-        format.html { redirect_to Article.find(params[:art_id]), notice: 'successfully created.' }
-        format.html { redirect_to article_path(params["#{@comment}"]['article_id']), notice: 'successfully created.' }
-        format.html { redirect_to article_path(params['comment']['article_id']), notice: 'successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -49,7 +46,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:name, :content)
+    params.require(:comment).permit(:name, :content, :user_id, :article_id)
   end
 
 end

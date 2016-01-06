@@ -4,23 +4,17 @@
 <h3>Comments</h3>
 <% if @comments != nil %>
 <% @comments.each do |comment| %>
+<% if comment.user_id != nil %>
 <b><%= comment.created_at %></b>
 <br>
 <%= comment.content %>
 <br><br>
 <% end %>
 <% end %>
+<% end %>
 <br>
 <%= form_for @comment do |f| %>
-<br>
-<b><%= f.label 'Leave comment' %></b>
-<br>
-<%= f.text_area :content%>
-<%= hidden_field(:art_id, @article.id) %>
-<br>
-<%= f.submit 'Submit comment' %>
-<br>
-<br>
+<br><br>
 <b><%= f.label 'Leave comment' %></b>
 <br>
 <%= f.text_area :content%>
