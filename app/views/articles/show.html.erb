@@ -4,10 +4,11 @@
 <h3>Comments</h3>
 <% if @comments != nil %>
 <% @comments.each do |comment| %>
-<b><%= comment.user_id %>
-<%= comment.created_at %></b>
-<br>
-<%= comment.content %>
+<b><%= User.find(comment.user_id).name %> posted:</b>
+<br><br>
+"<%= comment.content %>"
+<br>at:
+<b><%= comment.created_at %></b>
 <br><br>
 <% end %>
 <% end %>
