@@ -41,6 +41,11 @@ class ArticlesController < ApplicationController
 
   end
 
+  def time_finder(time)
+    raw_time = Time.now - time
+    raw_time
+  end
+
   private
 
   def set_article
