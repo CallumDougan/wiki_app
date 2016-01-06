@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to Article.find(params[:article_id]), notice: 'Recipe was successfully created.' }
+        format.html { redirect_to Article.find(@article.id), notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
