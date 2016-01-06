@@ -23,6 +23,9 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to article_path(params['comment']['article_id']), notice: 'well posted!' }
+        format.html { redirect_to Article.find(params[:art_id]), notice: 'successfully created.' }
+        format.html { redirect_to article_path(params["#{@comment}"]['article_id']), notice: 'successfully created.' }
+        format.html { redirect_to article_path(params['comment']['article_id']), notice: 'successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
