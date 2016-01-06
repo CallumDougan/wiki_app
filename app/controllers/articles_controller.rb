@@ -7,6 +7,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = Comment.all
+    @comments.where(:article_id => params[:id])
   end
 
   def new
@@ -21,7 +24,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Recipe was successfully created.' }
+        format.html { redirect_to Article.find(params[:article_id]), notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
