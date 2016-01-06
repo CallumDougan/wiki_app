@@ -20,10 +20,10 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    @comment.article_id = params[:comment][:set_id]
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to article_path(params['comment']['article_id']), notice: 'well posted!' }
-        format.json { render :show, status: :created, location: @comment }
+        format.html { redirect_to article_path(params[:comment][:set_id]), notice: 'successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
