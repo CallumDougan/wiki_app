@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:destroy]
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -21,7 +22,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to Article.find(@comment.article_id), notice: 'successfully created.' }
+        format.html { redirect_to article_path(params["#{@comment}"]['article_id']), notice: 'successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
