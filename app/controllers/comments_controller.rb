@@ -23,10 +23,14 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
 <<<<<<< HEAD
+<<<<<<< HEAD
         format.html { redirect_to Article.find(params[:art_id]), notice: 'successfully created.' }
 =======
         format.html { redirect_to article_path(params["#{@comment}"]['article_id']), notice: 'successfully created.' }
 >>>>>>> 9e8ca18cf7c77107991e0df08afbc3a5e8780c9a
+=======
+        format.html { redirect_to article_path(params['comment']['article_id']), notice: 'successfully created.' }
+>>>>>>> 19f50783637ff9d90c2489a6bbcd5cedf567a07e
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
