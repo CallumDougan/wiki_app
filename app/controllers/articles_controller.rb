@@ -28,6 +28,7 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to article_path(@article)
   end
 
   def update
