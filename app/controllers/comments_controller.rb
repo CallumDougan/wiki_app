@@ -24,7 +24,6 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to article_path(params[:comment][:set_id]), notice: 'successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -47,7 +46,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:name, :content, :article_id)
+    params.require(:comment).permit(:name, :content, :user_id, :article_id)
   end
 
 end
