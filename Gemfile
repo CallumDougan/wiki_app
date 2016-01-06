@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry-byebug'
 gem 'devise'
 gem 'cancancan'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

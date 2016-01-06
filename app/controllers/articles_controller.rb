@@ -8,8 +8,7 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = Comment.all
-    @comments.where(:article_id => params[:id])
+    @comments = Comment.where(:article_id => params[:id])
   end
 
   def new
