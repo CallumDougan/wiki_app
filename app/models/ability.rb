@@ -6,10 +6,14 @@ class Ability
 
     if user.role == :admin
         can :manage, :all
-    elsif
+    if user.role == :author
+        can :read, :all
+        can :create, :update, :article
+    else
         can :read, :all
     end
-  end
+    end
+end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
